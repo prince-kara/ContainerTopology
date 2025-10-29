@@ -5,7 +5,7 @@ topology:
   kinds:
     nokia_srsim:
       image: localhost/nokia/srsim:25.7.R1
-      license: /home/smallserver-nfs3/Documents/licenses/KanTAC_25_SR_SIM_license.txt
+      license: /home/hv03/license/KanTAC_25_SR_SIM_license.txt
 
   nodes:
     CE-1:

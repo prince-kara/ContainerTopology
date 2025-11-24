@@ -105,10 +105,10 @@ topology:
         /configure card 1 card-type iom4-e admin-state enable
         /configure sfm 1 sfm-type m-sfm6-7/12 admin-state enable
         /configure card 1 mda 1 mda-type me10-10gb-sfp+ admin-state enable
-        /configure port 1/1/1 admin-state enable
+        /configure port 1/1/2 admin-state enable
         /configure router interface "system" ipv4 primary address 10.10.10.9 prefix-length 32 
         /configure router interface "system" ipv6 address 2001:db8:a:900::9 prefix-length 128
-        /configure router interface "toR5" port 1/1/1 ipv4 primary address 10.5.9.9 prefix-length 27
+        /configure router interface "toR5" port 1/1/2 ipv4 primary address 10.5.9.9 prefix-length 27
         /configure router interface "toR5" ipv6
         /configure router interface "loopback1-1" loopback ipv4 primary address 192.168.1.1 prefix-length 32
         /configure router interface "loopback1-1" ipv6 address 2001:db8:a:901::1 prefix-length 128
@@ -132,10 +132,10 @@ topology:
         /configure card 1 card-type iom4-e admin-state enable
         /configure sfm 1 sfm-type m-sfm6-7/12 admin-state enable
         /configure card 1 mda 1 mda-type me10-10gb-sfp+ admin-state enable
-        /configure port 1/1/1 admin-state enable
+        /configure port 1/1/2 admin-state enable
         /configure router interface "system" ipv4 primary address 10.10.10.10 prefix-length 32 
         /configure router interface "system" ipv6 address 2001:db8:a:1000::10 prefix-length 128
-        /configure router interface "toR6" port 1/1/1 ipv4 primary address 10.6.10.10 prefix-length 27
+        /configure router interface "toR6" port 1/1/2 ipv4 primary address 10.6.10.10 prefix-length 27
         /configure router interface "toR6" ipv6
         /configure router interface "loopback2-1" loopback ipv4 primary address 192.168.2.1 prefix-length 32
         /configure router interface "loopback2-1" ipv6 address 2001:db8:a:1001::1 prefix-length 128
@@ -159,4 +159,4 @@ topology:
     - endpoints: ["R2:1/1/1", "R6:1/1/1"]
     - endpoints: ["R5:1/1/3", "R6:1/1/3"]
     - endpoints: ["R5:1/1/2", "R9:1/1/2"]
-    - endpoints: ["R6:1/1/2", "R10:1/1/2"]
+    - endpoints: ["R6:1/1/2", "R10:1/1/2"]        

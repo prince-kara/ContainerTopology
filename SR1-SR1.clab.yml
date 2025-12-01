@@ -1,0 +1,29 @@
+name: SR-SIM_IXR-e2_SR-1
+topology:
+  kinds:
+    nokia_srsim:
+      image: localhost/nokia/srsim:25.7.R1
+      license: /home/smallserver-nfs3/Documents/licenses/KanTAC_25_SR_SIM_license.txt
+  nodes:
+    sr-1-a:
+      kind: nokia_srsim
+      type: SR-1
+      env:
+        NOKIA_SROS_SLOT: A
+    sr-1a-1:
+      kind: nokia_srsim
+      type: SR-1
+      network-mode: container:sr-1-a
+      env:
+        NOKIA_SROS_SLOT: 1
+    sr-1-b:
+      kind: nokia_srsim
+      type: SR-1
+      env:
+        NOKIA_SROS_SLOT: A
+    sr-1b-1:
+      kind: nokia_srsim
+      type: SR-1
+      network-mode: container:sr-1-b
+      env:
+        NOKIA_SROS_SLOT: 1
